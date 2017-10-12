@@ -1,0 +1,57 @@
+{
+  "name": "messenger-req-log",
+  "description": "Use `req.log` for logging (messenger-core)",
+  "version": "0.1.0",
+  "homepage": "https://github.com/AndreasPizsa/messenger-req-log",
+  "author": "Andreas Pizsa (https://github.com/AndreasPizsa)",
+  "repository": "AndreasPizsa/messenger-req-log",
+  "bugs": {
+    "url": "https://github.com/AndreasPizsa/messenger-req-log/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "test": "npm run lint && nyc ava",
+    "commit": "git cz",
+    "commitmsg": "validate-commit-msg",
+    "precommit": "npm test",
+    "prepublishOnly": "npm test",
+    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "start": "micro",
+    "dev": "micro-dev"
+  },
+  "keywords": [
+    "log",
+    "messenger",
+    "req"
+  ],
+  "devDependencies": {
+    "@andreaspizsa/eslint-config": "0.0.1",
+    "ava": "^0.22.0",
+    "codecov": "^2.3.0",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "eslint": "^4.8.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "nyc": "^11.2.1",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

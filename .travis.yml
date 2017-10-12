@@ -1,0 +1,8 @@
+sudo: false
+language: node_js
+node_js:
+  - 'node'
+  - '8'
+script:
+  - npm test
+  - npm run report-coverage
