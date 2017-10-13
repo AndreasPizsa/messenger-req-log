@@ -1,5 +1,5 @@
 const test = require('ava')
-const requestLog = require('./')()
+const requestLog = require('../')()
 
 test('it will leave context unchanged if there’s no `context.http.req.log`', t => {
   const message = {}
